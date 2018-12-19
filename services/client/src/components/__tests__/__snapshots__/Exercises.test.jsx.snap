@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Exercises renders a snapshot properly 1`] = `
+<div>
+  <h1>
+    Exercises
+  </h1>
+  <hr />
+  <br />
+  <div>
+    <div
+      className="alert alert-warning"
+    >
+      <span
+        aria-hidden="true"
+        className="glyphicon glyphicon-exclamation-sign"
+      />
+      <span>
+         Please log in to submit an exercise.
+      </span>
+    </div>
+    <br />
+  </div>
+  <div>
+    <h4>
+      Define a function called sum that takes
+				two integers as arguments and returns their sum.
+    </h4>
+    <br />
+    <br />
+  </div>
+</div>
+`;

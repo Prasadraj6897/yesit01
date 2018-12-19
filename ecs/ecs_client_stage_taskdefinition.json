@@ -1,0 +1,25 @@
+{
+	"containerDefinitions": [
+		{
+			"name": "client",
+			"image": "%s.dkr.ecr.us-west-1.amazonaws.com/rep-yesit02_client:staging",
+			"essential": true,
+			"memoryReservation": 300,
+			"portMappings": [
+				{
+					"hostPort": 0,
+					"protocol": "tcp",
+					"containerPort": 80
+				}
+			],
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"options": {
+					"awslogs-group": "yesit02-client-stage",
+					"awslogs-region": "us-west-1"
+				}
+			}
+		}
+	],
+	"family": "yesit02-client-stage-td"
+}

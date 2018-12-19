@@ -1,0 +1,31 @@
+{
+	"containerDefinitions": [
+		{
+			"name": "swagger",
+			"image": "%s.dkr.ecr.us-west-1.amazonaws.com/rep-yesit02-swagger:production",
+			"essential": true,
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"options": {
+					"awslogs-group": "yesit02-swagger-prod",
+					"awslogs-region": "us-west-1"
+				}
+			},
+			"portMappings": [
+				{
+					"hostPort": 0,
+					"protocol": "tcp",
+					"containerPort": 8080
+				}
+			],
+			"environment": [
+				{
+					"name": "URL",
+					"value": "swagger.json"
+				}
+			],
+			"memoryReservation": 300
+		}
+	],
+	"family": "yesit02-swagger-prod-td"
+}
